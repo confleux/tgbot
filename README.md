@@ -6,7 +6,7 @@
 
     npm run start
     
-## API usage
+# API usage
 
 ## Broadcast message to all users
 
