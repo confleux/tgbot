@@ -1,6 +1,6 @@
 import express from "express";
 import config from "config";
-import tgbot from "./tgbot";
+import createTgBot from "./createTgBot";
 import connect from "./db/connect";
 import routes from "./routes";
 
@@ -14,7 +14,7 @@ app.use(express.json());
 app.listen(port, host, async () => {
   try {
     await connect();
-    const bot = await tgbot();
+    const bot = await createTgBot();
     //  @ts-ignore
     routes(app, bot);
     console.log(`App listening at ${host}:${port}`);

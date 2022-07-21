@@ -26,6 +26,19 @@ export default async function (): Promise<Telegraf<Context> | void> {
 
     await bot.launch();
 
+    bot.command("meow", (ctx) => {
+      ctx.reply("Meow-meow");
+    });
+
+    bot.command("help", (ctx) => {
+      ctx.reply("You will receive here messages");
+    });
+
+
+    bot.on("text", (ctx) => {
+      ctx.reply("Meow");
+    });
+
     console.log("Telegram bot has been launched");
 
     return bot;
@@ -35,12 +48,4 @@ export default async function (): Promise<Telegraf<Context> | void> {
     }
   }
 
-  //  bot.command("action", (ctx) => {
-  //    ctx.reply("you have done an action");
-  //    console.log(ctx.chat.id);
-  //  });
-
-  //  bot.on("text", (ctx) => {
-  //    console.log(ctx.message);
-  //  });
 }
