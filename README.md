@@ -2,7 +2,7 @@
 
     npm install
 
- Set up bot token in config file 
+ Set up bot token in config file then run: 
 
     npm run start
     
