@@ -1,4 +1,4 @@
-#Installation and run
+##Installation and run
 
     npm install
 
@@ -6,7 +6,7 @@
 
     npm run start
     
-#API usage
+##API usage
 
 ## Broadcast message to all users
 
